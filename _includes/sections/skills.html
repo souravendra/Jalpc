@@ -16,12 +16,12 @@
             labels: "{{ site.data.index.skills.aspects }}".split(","),
             datasets: [{
                 label: "{{ site.data.index.skills.label }}",
-                backgroundColor: "rgba(179,181,198,0.2)",
-                borderColor: "#3385FF",
-                pointBackgroundColor: "#3385FF",
+                backgroundColor: "rgba(56, 133, 255, 0.3)",
+                borderColor: "#000000",
+                pointBackgroundColor: "#000000",
                 pointBorderColor: "#fff",
-                pointHoverBackgroundColor: "#3385FF",
-                pointHoverBorderColor: "#3385FF",
+                pointHoverBackgroundColor: "#000000",
+                pointHoverBorderColor: "#000000",
                 data: [{{ site.data.index.skills.percentage }}]
                 }]
         };
@@ -34,6 +34,8 @@
                     ticks: {min: 0, max: 100},
                     lineArc: false,
                     pointLabels: {fontSize: 14},
+                    angleLines: {color: 'rgba(0, 0, 0, 0.2)'}, 
+                    gridLines: {color: 'rgba(0, 0, 0, 0.2)', circular: false, display: true, drawOnChartArea: false, drawBorder: true}, 
                 },
                 legend: {display: false},
             }
@@ -41,3 +43,9 @@
         </script>
     </div>
 </div>
+
+<!-- KEY:
+    "angleLines" - lines that radiate outward from the centre to each vertex
+    "gridLines" - lines that compose the grid, array of values will specify colour of each line 
+    
+    -->
